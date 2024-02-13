@@ -13,7 +13,8 @@
   <header class="m-11">
     <div class="navbar bg-[#1090D81A] rounded-md">
       <div class="navbar-start">
-        <a class="btn btn-ghost text-xl">daisyUI</a>
+        <a><span class="font-semibold text-5xl">Interactive</span> <br> <span class="text-3xl text-[#11111199]">Geometry
+            Genius</span></a>
       </div>
       <div class="navbar-end">
         <a class="btn bg-[#1090D8]">Blog</a>
@@ -21,38 +22,39 @@
     </div>
   </header>
   <main>
-    <div class="flex m-11">
+    <div class="flex flex-col lg:flex-row m-11">
       <!-- shape card container -->
       <div class="flex-1 grid gap-y-6 grid-cols-1 md:grid-cols-2 lg:grid-cols-3">
         <!-- triangle card -->
         <div class="card w-96 bg-base-100 shadow-xl">
           <figure class="px-10 pt-10">
-            <img src="images/triangle.png" alt="Shoes" class="rounded-xl" />
+            <img class="w-full" src="images/triangle.png" alt="Shoes" class="rounded-xl" />
           </figure>
           <div class="card-body items-center text-center">
             <h2 class="card-title">Triangle</h2>
-            <p>Area (A) = 0.5 x b h</p>
-            <div class="flex">
-              <input class="bg-[#F1F1F1] text-xl w-24" type="text" name="" id="" placeholder="b">
+            <p>Area (A) = 0.5 x b x h</p>
+            <p>Area: <span id="triangle-area">0</span> <span>cm<sup>2</sup></span> </p>
+            <div class="flex items-center">
+              <input class="bg-[#F1F1F1] text-xl w-24 p-2 rounded-md" type="text" name="" id="triangle-base" placeholder="b">
               <span class="text-xl mx-2">cm</span>
-              <input class="bg-[#F1F1F1] text-xl w-24" type="text" name="" id="" placeholder="h">
+              <input class="bg-[#F1F1F1] text-xl w-24 p-2 rounded-md" type="text" name="" id="triangle-hight" placeholder="h">
               <span class="text-xl ml-2">cm</span>
             </div>
-            <button class="btn btn-primary w-full">Calculate</button>
+            <button onclick="triangleAreaCalculation()" class="btn btn-primary w-full">Calculate</button>
           </div>
         </div>
         <!-- rectangle card -->
         <div class="card w-96 bg-base-100 shadow-xl">
           <figure class="px-10 pt-10">
-            <img src="images/rectangle.png" alt="Shoes" class="rounded-xl" />
+            <img class="w-full" src="images/rectangle.png" alt="Shoes" class="rounded-xl" />
           </figure>
           <div class="card-body items-center text-center">
             <h2 class="card-title">Rectangle</h2>
             <p>Area (A) = w x I</p>
-            <div class="flex">
-              <input class="bg-[#F1F1F1] text-xl w-24" type="text" name="" id="" placeholder="b">
+            <div class="flex items-center">
+              <input class="bg-[#F1F1F1] text-xl w-24 p-2 rounded-md" type="text" name="" id="" placeholder="W">
               <span class="text-xl mx-2">cm</span>
-              <input class="bg-[#F1F1F1] text-xl w-24" type="text" name="" id="" placeholder="h">
+              <input class="bg-[#F1F1F1] text-xl w-24 p-2 rounded-md" type="text" name="" id="" placeholder="I">
               <span class="text-xl ml-2">cm</span>
             </div>
             <button class="btn btn-primary w-full">Calculate</button>
@@ -61,67 +63,80 @@
         <!-- parallelogram card -->
         <div class="card w-96 bg-base-100 shadow-xl">
           <figure class="px-10 pt-10">
-            <img src="https://daisyui.com/images/stock/photo-1606107557195-0e29a4b5b4aa.jpg" alt="Shoes"
-              class="rounded-xl" />
+            <img class="w-full" src="images/parallelogram.png" alt="Shoes" class="rounded-xl" />
           </figure>
           <div class="card-body items-center text-center">
-            <h2 class="card-title">Shoes!</h2>
-            <p>If a dog chews shoes whose shoes does he choose?</p>
-            <div class="card-actions">
-              <button class="btn btn-primary">Buy Now</button>
+            <h2 class="card-title">Parallelogram</h2>
+            <p>Area (A) = b x h</p>
+            <div class="flex items-center">
+              <input class="bg-[#F1F1F1] text-xl w-24 p-2 rounded-md" type="text" name="" id="" placeholder="b">
+              <span class="text-xl mx-2">cm</span>
+              <input class="bg-[#F1F1F1] text-xl w-24 p-2 rounded-md" type="text" name="" id="" placeholder="h">
+              <span class="text-xl ml-2">cm</span>
             </div>
+            <button class="btn btn-primary w-full">Calculate</button>
           </div>
         </div>
         <!-- rhombus card -->
         <div class="card w-96 bg-base-100 shadow-xl">
           <figure class="px-10 pt-10">
-            <img src="https://daisyui.com/images/stock/photo-1606107557195-0e29a4b5b4aa.jpg" alt="Shoes"
-              class="rounded-xl" />
+            <img class="w-full" src="images/rhombus.png" alt="Shoes" class="rounded-xl" />
           </figure>
           <div class="card-body items-center text-center">
-            <h2 class="card-title">Shoes!</h2>
-            <p>If a dog chews shoes whose shoes does he choose?</p>
-            <div class="card-actions">
-              <button class="btn btn-primary">Buy Now</button>
+            <h2 class="card-title">Rhombus</h2>
+            <p>Area (A) = 0.5 x d<sub>1</sub> x h<sub>2</sub></p>
+            <div class="flex items-center">
+              <input class="bg-[#F1F1F1] text-xl w-24 p-2 rounded-md" type="text" name="" id="" placeholder="b">
+              <span class="text-xl mx-2">cm</span>
+              <input class="bg-[#F1F1F1] text-xl w-24 p-2 rounded-md" type="text" name="" id="" placeholder="h">
+              <span class="text-xl ml-2">cm</span>
             </div>
+            <button class="btn btn-primary w-full">Calculate</button>
           </div>
         </div>
         <!-- pentagon card -->
         <div class="card w-96 bg-base-100 shadow-xl">
           <figure class="px-10 pt-10">
-            <img src="https://daisyui.com/images/stock/photo-1606107557195-0e29a4b5b4aa.jpg" alt="Shoes"
-              class="rounded-xl" />
+            <img class="w-full" src="images/pentagon.png" alt="Shoes" class="rounded-xl" />
           </figure>
           <div class="card-body items-center text-center">
-            <h2 class="card-title">Shoes!</h2>
-            <p>If a dog chews shoes whose shoes does he choose?</p>
-            <div class="card-actions">
-              <button class="btn btn-primary">Buy Now</button>
+            <h2 class="card-title">Pentagon</h2>
+            <p>Area (A) = 0.5 x p x b</p>
+            <div class="flex items-center">
+              <input class="bg-[#F1F1F1] text-xl w-24 p-2 rounded-md" type="text" name="" id="" placeholder="p">
+              <span class="text-xl mx-2">cm</span>
+              <input class="bg-[#F1F1F1] text-xl w-24 p-2 rounded-md" type="text" name="" id="" placeholder="b">
+              <span class="text-xl ml-2">cm</span>
             </div>
+            <button class="btn btn-primary w-full">Calculate</button>
           </div>
         </div>
         <!-- ellipse card -->
         <div class="card w-96 bg-base-100 shadow-xl">
           <figure class="px-10 pt-10">
-            <img src="https://daisyui.com/images/stock/photo-1606107557195-0e29a4b5b4aa.jpg" alt="Shoes"
-              class="rounded-xl" />
+            <img class="w-full" src="images/ellipse.png" alt="Shoes" class="rounded-xl" />
           </figure>
           <div class="card-body items-center text-center">
-            <h2 class="card-title">Shoes!</h2>
-            <p>If a dog chews shoes whose shoes does he choose?</p>
-            <div class="card-actions">
-              <button class="btn btn-primary">Buy Now</button>
+            <h2 class="card-title">Ellipse</h2>
+            <p>Area (A) = pi x a x b</p>
+            <div class="flex items-center">
+              <input class="bg-[#F1F1F1] text-xl w-24 p-2 rounded-md" type="text" name="" id="" placeholder="a">
+              <span class="text-xl mx-2">cm</span>
+              <input class="bg-[#F1F1F1] text-xl w-24 p-2 rounded-md" type="text" name="" id="" placeholder="b">
+              <span class="text-xl ml-2">cm</span>
             </div>
+            <button class="btn btn-primary w-full">Calculate</button>
           </div>
         </div>
       </div>
       <!-- area calculation container -->
-      <div>
-        <h1>Area calculation</h1>
+      <div class="border-2 p-3">
+        <h1 class="text-xl font-semibold text-[#111111CC]">Area calculation</h1>
         <hr />
       </div>
     </div>
   </main>
+  <script src="Scripts/triangel-area.js"></script>
 </body>
 
 </html>
